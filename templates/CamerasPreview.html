@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        {% for i in range(0,camerasCount) %}
+            <td>{{i}}</td>
+            <td><img id="{{ i }}" src="{{ url_for('video_feed', task_id=i) }}"></td>
+        {% endfor %}
+    </tr>
+
+</table>
+
+
+</body>
+</html>

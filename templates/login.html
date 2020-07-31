@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+	$('#button').click(function(e){
+		var user = $('#login').val();
+		var pass = $('#password').val();
+		$.ajax({
+			url: '/camerasPreview',
+			data: {
+			    login: user,
+			    password: pass
+			},
+			type: 'GET',
+			success: function(response){
+			    $("#test2").text("success");
+			    $("#mypar").html(response);
+			}
+		});
+		e.preventDefault();
+	});
+});
+</script>
+
+</head>
+<body>
+    Hello
+    <div id="mypar"></div>
+<form>
+  <label for="login">Login:</label>
+  <input type="text" id="login" name="login"><br><br>
+  <label for="password">Password:</label>
+  <input type="text" id="password" name="password"><br><br>
+   <button id="button">Fetch Data</button>
+</form>
+
+    <div id="msg">xx</div>
+
+<p id="test1">This is a paragraph.</p>
+<p id="test2">This is another paragraph.</p>
+
+<p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+
+</body>
+</html>
