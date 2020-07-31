@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../Camera/.idea/Camera.iml" filepath="$PROJECT_DIR$/../Camera/.idea/Camera.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../StorageHandler/.idea/StorageHandler.iml" filepath="$PROJECT_DIR$/../StorageHandler/.idea/StorageHandler.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/firstProject.iml" filepath="$PROJECT_DIR$/.idea/firstProject.iml" />
     </modules>
   </component>

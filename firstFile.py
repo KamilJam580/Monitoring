@@ -5,14 +5,12 @@ total, used, free = shutil.disk_usage("/")
 print("Total: %d MiB" % (total // (2**20)))
 print("Used: %d MiB" % (used // (2**20)))
 print("Free: %d MiB" % (free // (2**20)))
-print("Free: %d MiB" % (free // (2**20)))
+
 
 
 from Camera import Camera
-from tkinter import *
 import time
 import cv2
-import numpy as np
 
 devices = Camera.getDevicesList()
 print(devices)
@@ -29,12 +27,10 @@ print("Ilość kamer: " + str(len(Cameras)))
 import threading
 
 ### REST
-from flask import Flask, render_template, Response
+from flask import render_template, Response
 from flask import Flask, jsonify
 from flask import abort
-from flask import make_response
 from flask import request
-from pkg_resources._vendor.appdirs import unicode
 
 Login = "kamil"
 Password = "123"
